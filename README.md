@@ -17,7 +17,6 @@
 		 modelo
 		 año de fabricacion
 		 precio
-		 cantidad stock
 	 Computador
 		 gpu
 		 psu
