@@ -17,6 +17,7 @@
 		 modelo
 		 año de fabricacion
 		 precio
+		 cantidad stock
 	 Computador
 		 gpu
 		 psu
@@ -26,7 +27,7 @@
 		 resolucion
 		 tipo de teclado
 		 bateria(medida en mAh)
-	Tablet
+	 Tablet
 		 resolucion
 		 accesorios
 
@@ -35,12 +36,17 @@
 		 direccion
 		 catalogo
 
+	 GestorDeArchivos
+
+	 Boleta
 ## Funcionalidades
 
-Agregar clientes y disposivitivos, modificar direccion de la tienda, realizar ventas de dispositivos a clientes especificos, buscar dispositivos disponibles(por marca, modelo o precio) y generar una lista asociada a un cliente.
+Agregar clientes y dispositivos, modificar dirección de la tienda, realizar ventas de dispositivos a clientes específicos, buscar dispositivos disponibles(por marca, modelo o precio) y generar una lista asociada a un cliente.
 
 ## Relaciones
 
- Cliente -> Tienda
- Dispositivo -> Tienda
- Dispositivo -> Cliente
+ (Cliente -> Tienda)
+ (Dispositivo -> Tienda)
+ (Cliente ->Boleta)
+ (Tienda -> Boleta)
+ (Dispositivo -> Boleta)
