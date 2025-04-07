@@ -1,10 +1,13 @@
 package tienda;
 
 public class Computador extends Dispositivo {
-    private final String tarjetaGrafica;
-    private final String fuentePoder;
-    private final String gabinete;
-    private final String pantalla;
+    private String tarjetaGrafica;
+    private String fuentePoder;
+    private String gabinete;
+    private String pantalla;
+
+    public Computador() {
+    }
 
     public Computador(String marca, String modelo, int ram, int almacenamiento,
                       String procesador, String annoFabricacion, String precio, String tarjetaGrafica, String fuentePoder, String gabinete, String pantalla) {
@@ -29,5 +32,15 @@ public class Computador extends Dispositivo {
 
     public String getPantalla() {
         return pantalla;
+    }
+
+    @Override
+    public String toString() {
+        return "Computador{" +
+                "tarjetaGrafica='" + tarjetaGrafica + '\'' +
+                ", fuentePoder='" + fuentePoder + '\'' +
+                ", gabinete='" + gabinete + '\'' +
+                ", pantalla='" + pantalla + '\'' +
+                '}';
     }
 }

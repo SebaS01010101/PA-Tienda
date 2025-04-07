@@ -5,9 +5,12 @@ import java.util.List;
 
 public class Tienda {
 
-    private final String direccion;
+    private String direccion;
     private List<Dispositivo> dispositivos;
     private List<Cliente> clientes;
+
+    public Tienda() {
+    }
 
     public Tienda(String direccion) {
         this.direccion = direccion;

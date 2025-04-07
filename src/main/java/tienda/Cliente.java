@@ -1,12 +1,15 @@
 package tienda;
 
 public class Cliente {
-    private final String nombre;
-    private final String apellido;
-    private final String correo;
-    private final String telefono;
-    private final Boolean estadoCivil;
-    private final String ciudad;
+    private String nombre;
+    private String apellido;
+    private String correo;
+    private String telefono;
+    private Boolean estadoCivil;
+    private String ciudad;
+
+    public Cliente() {
+    }
 
     public Cliente(String nombre, String apellido, String correo,
                    String telefono, Boolean estadoCivil, String ciudad) {
@@ -34,8 +37,8 @@ public class Cliente {
         return telefono;
     }
 
-    public String getEstadoCivil() {
-        return estadoCivil ? "Casado" : "Soltero";
+    public Boolean getEstadoCivil() {
+        return estadoCivil;
     }
 
     public String getCiudad() {

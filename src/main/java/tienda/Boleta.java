@@ -6,10 +6,13 @@ import java.util.List;
 
 public class Boleta {
 
-    private final Date fecha;
+    private Date fecha;
     private Tienda tienda;
-    private final List<Dispositivo> dispositivos;
-    private final Cliente cliente;
+    private List<Dispositivo> dispositivos;
+    private Cliente cliente;
+
+    public Boleta() {
+    }
 
     public Boleta(Date fecha, Tienda tienda, Cliente cliente) {
         this.fecha = fecha;
@@ -41,6 +44,10 @@ public class Boleta {
 
     public Date getFecha() {
         return fecha;
+    }
+
+    public Tienda getTienda() {
+        return tienda;
     }
 
     public List<Dispositivo> getDispositivos() {

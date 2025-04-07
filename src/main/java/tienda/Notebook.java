@@ -1,9 +1,12 @@
 package tienda;
 
 public class Notebook extends Dispositivo{
-    private final String resolucionPantalla;
-    private final String tipoTeclado;
-    private final int bateria;
+    private String resolucionPantalla;
+    private String tipoTeclado;
+    private int bateria;
+
+    public Notebook() {
+    }
 
     public Notebook(String marca, String modelo, int ram, int almacenamiento, String procesador, String annoFabricacion, String precio,
                     String resolucionPantalla, String tipoTeclado, int bateria) {
@@ -23,5 +26,14 @@ public class Notebook extends Dispositivo{
 
     public int getBateria() {
         return bateria;
+    }
+
+    @Override
+    public String toString() {
+        return "Notebook{" +
+                "resolucionPantalla='" + resolucionPantalla + '\'' +
+                ", tipoTeclado='" + tipoTeclado + '\'' +
+                ", bateria=" + bateria +
+                '}';
     }
 }
