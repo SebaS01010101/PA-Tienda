@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tablet extends Dispositivo{
-    private final String resolucionPantalla;
-    private final List<String> accesorios;
+    private String resolucionPantalla;
+    private List<String> accesorios;
+
+    public Tablet() {
+    }
 
     public Tablet(String marca, String modelo, int ram, int almacenamiento, String procesador, String annoFabricacion,
                   String precio, String resolucionPantalla, List<String> accesorios) {
@@ -20,5 +23,13 @@ public class Tablet extends Dispositivo{
 
     public List<String> getAccesorios() {
         return accesorios;
+    }
+
+    @Override
+    public String toString() {
+        return "Tablet{" +
+                "resolucionPantalla='" + resolucionPantalla + '\'' +
+                ", accesorios=" + accesorios +
+                '}';
     }
 }

@@ -1,14 +1,27 @@
 package tienda;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "tipo") // Campo que define el tipo
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Computador.class, name = "computador"),
+        @JsonSubTypes.Type(value = Notebook.class, name = "notebook"),
+        @JsonSubTypes.Type(value = Tablet.class, name = "tablet")
+})
+
 public class Dispositivo {
 
-    private final String marca;
-    private final String modelo;
-    private final int ram;
-    private final int almacenamiento;
-    private final String procesador;
-    private final String annoFabricacion;
-    private final String precio;
+    private String marca;
+    private String modelo;
+    private int ram;
+    private int almacenamiento;
+    private String procesador;
+    private String annoFabricacion;
+    private String precio;
+
+    public Dispositivo() {
+    }
 
     public Dispositivo(String marca, String modelo, int ram, int almacenamiento,
                        String procesador, String annoFabricacion, String precio) {
@@ -52,8 +65,12 @@ public class Dispositivo {
     @Override
     public String toString() {
         return "Dispositivo{" +
-                "modelo='" + modelo + '\'' +
-                ", marca='" + marca + '\'' +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", ram=" + ram +
+                ", almacenamiento=" + almacenamiento +
+                ", procesador='" + procesador + '\'' +
+                ", annoFabricacion='" + annoFabricacion + '\'' +
                 ", precio='" + precio + '\'' +
                 '}';
     }
